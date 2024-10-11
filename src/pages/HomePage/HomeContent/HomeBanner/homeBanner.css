@@ -1,0 +1,16 @@
+.HomeBanner {
+      position: relative;
+}
+
+.HomeBanner img {
+      width: 100%;
+      height: 100%;
+}
+
+.bannerAdvertise {
+      position: absolute;
+      width: 30%;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+}

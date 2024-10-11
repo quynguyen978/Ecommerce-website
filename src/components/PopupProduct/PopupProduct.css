@@ -1,0 +1,58 @@
+/* create overlay for popupProduct */ 
+.product_overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+      z-index: 999; /* set above other content*/
+}
+.PopupProduct_container {
+      width: 50vw;
+      height: 65vh;
+      padding: 15px 20px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      background-color: white;
+}
+
+.popupProduct_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_img {
+      width: 100%;
+      height: 100%; 
+      object-fit: fill;
+}
+
+.close_popup {
+      padding: 20px 20px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: white;
+      border: none;
+}
+.close_popup:hover {
+      cursor: pointer;
+      background-color: rgb(234, 234, 234);
+}
+
+.popupProduct_item_decription {
+      /* padding-top: 40px; */
+}     
+
+.popupproduct_descrip_detail {
+      overflow-y: auto;
+      max-height: 260px; 
+      padding-right: 10px; /* Adds space for scrollbar */
+}

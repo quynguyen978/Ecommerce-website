@@ -1,0 +1,10 @@
+.HomeTopTrending_grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+}
+
+.HomeTopTrending_grid-listTitle  {
+      grid-column: 1 / span 4;
+}
+

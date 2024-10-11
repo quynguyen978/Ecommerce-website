@@ -1,0 +1,33 @@
+.categories_browse_grid {
+      display: grid;
+      gap: 10px;
+}
+
+.categories_grid-item1 {
+      text-align: center;
+      grid-template-columns: 1;
+}
+
+.categories_grid-item2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+}
+
+
+
+.categories_grid-item3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+}
+
+.categories_grid-item2 img, .categories_grid-item3 img {
+      margin-top: 10px;
+      width: 100%;
+      transition: opacity 0.3s ease; /* smooth transition */
+}
+
+.categories_grid-item2 img:hover, .categories_grid-item3 img:hover {
+      opacity: 0.6;
+}

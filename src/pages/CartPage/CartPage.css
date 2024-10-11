@@ -1,0 +1,11 @@
+.shopePageContainer {
+      width: 60%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 20px;
+}
+
+.cartPageTitle {
+      grid-column: 1/span 2;
+}

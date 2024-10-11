@@ -1,0 +1,9 @@
+.shopeHeader {
+      width: 60%;
+      margin: 10px auto;
+      padding: 45px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(241, 247, 247);
+}

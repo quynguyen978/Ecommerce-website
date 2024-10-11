@@ -1,0 +1,16 @@
+.checkoutOderContainer {
+      padding: 40px 30px;
+      background-color: rgba(243, 243, 243, 0.64);
+      align-self: start;
+}
+
+.checkoutItemDetail {
+      margin-top: 10px;
+      display: flex;
+      border-bottom: 2px solid rgb(210, 212, 212);
+}
+
+.checkout_itemPrice {
+      display: flex;
+      color: rgb(153, 158, 161);
+}

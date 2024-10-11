@@ -1,0 +1,4 @@
+
+.description-line {
+      white-space: pre-line; /* This CSS property helps preserve whitespace characters like newline (\n) */
+  }

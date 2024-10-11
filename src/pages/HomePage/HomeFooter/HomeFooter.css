@@ -1,0 +1,17 @@
+.HomeFooterContainer {
+      background-color: black;
+      color: white;
+      padding: 50px 0;
+}
+
+.HomeFooterContainer_grid {
+      width: 60%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.HomeFooterData_col_value {
+      color: rgb(146, 142, 142);
+      margin: 0;
+}

@@ -1,0 +1,12 @@
+.HomeShippingContainer {
+      margin-top: 30px;
+      padding: 40px 50px;
+      font-style: italic;
+      display: flex;
+      justify-content: space-around;
+      background-color: #f8f9fa;
+}
+
+.shipping_fontSize {
+      font-size: 13px;
+}

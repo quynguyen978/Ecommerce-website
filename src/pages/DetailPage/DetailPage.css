@@ -1,0 +1,11 @@
+.DetailPageContainer {
+      width: 60%;
+      margin: 20px auto 40px;
+}
+
+.detailPage_grid {
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+}

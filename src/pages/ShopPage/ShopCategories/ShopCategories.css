@@ -1,0 +1,16 @@
+.shopeCategories {
+      font-style: italic;
+}
+
+.cate_list-item {
+      color: rgb(116, 113, 113);
+}
+
+.cate_list-item:hover {
+      cursor: pointer;
+      color: rgb(207, 91, 28);
+}
+
+.active {
+      color: rgb(207, 91, 28);
+}

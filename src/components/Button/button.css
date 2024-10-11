@@ -1,0 +1,29 @@
+button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.normalBtn {
+      display: flex;
+      justify-content: space-around;
+      padding: 5px 20px 8px;
+      color: rgb(215, 212, 212);
+      text-align: center;
+      background-color: black;
+}
+
+.longBtn {
+      padding: 8px 20px;
+      font-size: 20px;
+      color: rgb(182, 177, 177);
+      background-color: rgb(43, 42, 42);
+}
+
+/* make italic for button title */
+.Italic {
+      font-style: italic;
+}
+
+button:hover {
+      background-color: rgb(63, 62, 62);
+}

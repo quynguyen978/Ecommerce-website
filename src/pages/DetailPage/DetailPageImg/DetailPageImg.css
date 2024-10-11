@@ -1,0 +1,19 @@
+.detail_img_container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-row: 1fr;
+      column-gap: 10px;
+}
+
+.images_detail {
+      height: 50%;
+}
+.images_detail img {
+      width: 100%;
+      height: auto;
+}
+
+.detailImg {
+      width: 100%;
+      height: 100%;
+}
