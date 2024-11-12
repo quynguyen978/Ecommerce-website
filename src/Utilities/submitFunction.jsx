@@ -1,7 +1,9 @@
 import { login_user } from "../redux/userLogin/userLoginAction";
+import { url } from '../Utilities/url';
+
 export const onSubmit = async (data, endpointType, navigate, dispatch) => {
   try {
-    const response = await fetch(`http://localhost:5000/${endpointType}`, {
+    const response = await fetch(`${url}/${endpointType}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -10,9 +12,12 @@ export const onSubmit = async (data, endpointType, navigate, dispatch) => {
     });
 
     const result = await response.json();
-    // console.log('user login issssssss', result.user._id);
+    console.log('result call api', result);
 
-    if (response.status === 200 || response.status === 201) {
+    if (response.ok) {
+      localStorage.setItem('token', result.token);
+      localStorage.setItem('userId', result.user._id);
+      localStorage.setItem('userName', result.user.fullName);
       // console.log(`${endpointType} successful:`, result);
       switch(endpointType) {
         case 'users':
@@ -24,6 +29,7 @@ export const onSubmit = async (data, endpointType, navigate, dispatch) => {
       };
     }
      else {
+      alert('Account is not match.');
       console.error(`${endpointType} failed:`, result.message);
     }
   } catch (err) {

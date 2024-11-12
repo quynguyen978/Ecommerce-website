@@ -33,7 +33,7 @@ function HomeTopTrending() {
                   {loading && <p className='fs-2 fw-bold'>Loading...</p>}
                 {error && <p>Error: {error}</p>}
                   {products && <HomeTopTrendingListItem products={products} clickImgProduct={handleImgProduct}/>}
-                  {isOpen && <PopupProduct products={selectProduct}/> }
+                  {isOpen && <PopupProduct product={selectProduct}/> }
             </div>
       )
 }

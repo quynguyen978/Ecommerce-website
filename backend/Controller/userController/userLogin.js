@@ -1,5 +1,7 @@
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const User = require('../../models/User');
+const main = require('../../services/mailer');
 
 const userLogin = async (req, res) => {
       const { email, passWord} = req.body;
@@ -8,11 +10,21 @@ const userLogin = async (req, res) => {
             // find the user
             const user = await User.findOne({ email });
             if(!user) {
-                  return res.status(400).json({ message: 'User not found'});
+                  return res.status(404).json({ message: 'User not found'});
             }
+            if ( !user.emailVeried ) {
+                  return res.status(403).json({ message: 'The email needs verify to login.'})
+            }
+            
             const match = await bcrypt.compare(passWord,user.password );
             if(match) {
-                  return res.status(200).json({ message: 'Login successful', user });
+                  const token = jwt.sign(
+                        {id: user._id, 
+                        email: user.email,},
+                        process.env.JWT_SECRET,
+                        { expiresIn: '1h'}
+                  );
+                  return res.status(200).json({ message: 'Login successful',token, user });
             }
             else {
                   return res.status(400).json({ message: ' Invalid credentials '});

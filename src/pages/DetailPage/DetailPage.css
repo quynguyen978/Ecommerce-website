@@ -1,5 +1,5 @@
 .DetailPageContainer {
-      width: 60%;
+      width: 68%;
       margin: 20px auto 40px;
 }
 
@@ -8,4 +8,31 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 10px;
+}
+
+/* mobile */
+@media (max-width: 576px) {
+      .DetailPageContainer {
+            width: 88%;
+            margin: 20px auto 40px;
+      }
+      
+      .detailPage_grid {
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+      }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+      .DetailPageContainer {
+            width: 68%;
+            margin: 20px auto 40px;
+      }
+      
+      .detailPage_grid {
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+      }
 }

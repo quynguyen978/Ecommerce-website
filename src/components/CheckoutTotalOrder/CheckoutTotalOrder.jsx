@@ -1,27 +1,32 @@
+import { useSelector } from 'react-redux';
 import './CheckoutTotalOrder.css';
+import { useLocation } from 'react-router-dom';
+import formatNumberWithDots from '../../Utilities/formatNumberWithDot';
 
-export default function CheckoutTotalOrder () {
+export default function  CheckoutTotalOrder () {
+      const cartUserItems = useSelector((state) => state.fetchUserCart.userCart);
+      const location = useLocation();
+      const { subTotal } = location.state || {};
+      
       return (
             <div className="checkoutOderContainer">
                   <h5 className="mb-4">YOUR ORDER</h5>
-                  <div className='checkoutItemDetail'>
-                        <p className="fw-medium">Apple iPhone 11 64GB</p>
-                        <div className='checkout_itemPrice'>
-                              <p className="ms-4">4390000 VND</p>
-                              <p className='ms-1'>x 1</p>
+                  { (cartUserItems && cartUserItems.cart ? 
+                  cartUserItems.cart.map((item, index) => {
+                            return  <div key = {index} className='checkoutItemDetail'>
+                                          <p className="fw-medium">{item.name}</p>
+                                          <div className='checkout_itemPrice'>
+                                                <p className="ps-2 d-flex">{formatNumberWithDots(item.price)} <span className='ps-1'>VND</span></p>
+                                                <p className='ms-2'> x{item.quantity}</p>
+                                          </div>
+                                     </div>
+                  }) : '')}
+                         { ( cartUserItems && cartUserItems.cart 
+                              && <div className='d-flex justify-content-between'>
+                              <p className='fw-bold'>TOTAL</p>
+                              <p className=' fs-5'>{subTotal} VND</p>
                         </div>
-                  </div>
-                  <div className='checkoutItemDetail'>
-                        <p className="checkoutOrder_itemName fw-medium">Apple iPhone 11 64GB </p>
-                        <div className='checkout_itemPrice'>
-                              <p className="ms-4">4390000 VND</p>
-                              <p className="ms-1"> x 1</p>
-                        </div>
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                        <p className='fw-bold'>TOTAL</p>
-                        <p className=' fs-5'>19.779.000 VND</p>
-                  </div>
+                         )}     
             </div>
       )
 }

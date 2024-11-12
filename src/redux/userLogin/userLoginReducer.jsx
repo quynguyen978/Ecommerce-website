@@ -19,7 +19,7 @@ export const login_reducer = (state = initialState, action) =>{
                   return {
                         ...state,
                         userName: '',
-                        userId: action.payload.userId,
+                        userId: null,
                         isLoggedIn: false,
                   }
             default:

@@ -8,7 +8,7 @@ function LoginPage() {
                   <img src={bannerImg} alt="banner img" className="SignUpimg"/>
             <div className="signUpContainer">
                   <p className="SignUp_header">Sign In</p>
-                  <FormSignIn email passWord/>
+                  <FormSignIn email passWord />
                   <p className="text-center mt-5">Create an account?
                              <Link to='/register' className="text-decoration-none"> Sign up </Link>
                   </p>

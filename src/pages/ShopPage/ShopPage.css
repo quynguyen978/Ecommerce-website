@@ -1,6 +1,26 @@
 .Cate_List_conainer {
-      width: 60%;
+      width: 68%;
       margin:35px auto;
       display: grid;
       grid-template-columns: 1fr 3fr;
+}
+
+@media (max-width: 576px) {
+      .Cate_List_conainer {
+            width: 88%;
+            margin:35px auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+      }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+      .Cate_List_conainer {
+            width: 88%;
+            margin:35px auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+      }
 }

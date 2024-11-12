@@ -12,5 +12,5 @@ export const login_user = (userName, userId) => {
 
 export const logout_user = () => ({
       type: LOGOUT_USER,
-      
+      payload: null,
 })

@@ -5,3 +5,11 @@
 .homeSubscribe-greeting {
       font-size: 13px;
 }
+
+@media (max-width: 576px) {
+
+      .subcribe-form > input {
+      width: 90%;
+      padding: 0 10px 0 10px;
+      }
+}

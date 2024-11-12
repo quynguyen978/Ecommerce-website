@@ -13,3 +13,23 @@
 .relateProductContainer p {
       text-align: center;
 }
+
+/* mobile */
+@media (max-width: 576px) {
+      .relateProductContainer {
+            padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+      }
+     }
+
+/* tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+      .relateProductContainer {
+            padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+      }
+     }

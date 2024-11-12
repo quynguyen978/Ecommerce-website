@@ -1,5 +1,12 @@
 .HomeContentContainer {
-      width: 60%;
+      width: 68%;
       margin: auto;
 }
 
+/* responsive */
+@media (max-width: 768px) {
+      .HomeContentContainer {
+            width: 88%;
+            margin: auto;
+      }
+}

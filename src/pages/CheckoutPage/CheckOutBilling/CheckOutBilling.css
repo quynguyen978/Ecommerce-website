@@ -1,5 +1,5 @@
 .billingContainer {
-      width: 60%;
+      width: 68%;
       margin: 40px auto;
       font-style: italic;
       color: rgb(90, 89, 89);
@@ -8,5 +8,23 @@
 .checkoutBillingGid {
       display: grid;
       grid-template-columns: 4fr 3fr;
-      column-gap: 30px;
+      row-gap: 30px;
+}
+
+@media (max-width: 768px) {
+      .billingContainer {
+            width: 88%;
+      }
+      
+      .checkoutBillingGid {
+            display: grid;
+            grid-template-columns: 1fr;
+      }
+
+      .checkoutBillingGid > :nth-child(1) {
+            order: 2;
+      }
+      .checkoutBillingGid > :nth-child(2) {
+            order: 1;
+      }
 }

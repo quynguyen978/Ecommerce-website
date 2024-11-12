@@ -15,7 +15,7 @@ function DetailPage() {
       const {products} = useSelector((state) => state.fetchdata);
       const [selectedItem, setSelectedItem] = useState(null);
       const [relatedProducts, setRelatedProduct] = useState(null);
-      console.log('idddd', id)
+      // console.log('idddd', products[0]._id.$oid);
       // fetdata
       useEffect(() => {
             dispatch(fetchProducts());

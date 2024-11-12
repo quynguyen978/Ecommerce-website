@@ -5,8 +5,10 @@ import select_product_reducer from "./popupProductDetail/popupProductDetailReduc
 import cateActiveItem_reducer from "./cateActiveItemShop/cateActiveItemReducer";
 import countReducer from "./CountItemproductDetail/countItemReducer";
 import { login_reducer } from "./userLogin/userLoginReducer";
+import fetchUserCartReducer from "./fetchUserCart/fetchUserCartReducer";
 
 const rootReducer = combineReducers ({
+      fetchUserCart: fetchUserCartReducer,
       fetchdata: fetchReducer,
       popupProduct: PopupProductReducer,
       selectProduct: select_product_reducer,

@@ -10,8 +10,9 @@ import './DetailPageItemInfor.css';
 export default function DetailPageItemInfor ({selectProduct}) {
       const dispatch = useDispatch();
       // item_number is the amount that user wants to buy
-      const item_number = useSelector((state) => state.countItem.item_number);
+      let item_number = useSelector((state) => state.countItem.item_number);
       const userId = useSelector((state) => state.loginUser.userId);
+
       // handle increase
       const handleIncrease = () => {
             dispatch(countUp());
@@ -27,7 +28,7 @@ export default function DetailPageItemInfor ({selectProduct}) {
             dispatch(countDown());
       } 
 
-      console.log('selected Produc', selectProduct)
+      // console.log('selected Produc', selectProduct)
       return (
             <div>
                  <p className='fs-1 fst-italic mt-4'>{selectProduct.name}</p>
@@ -39,7 +40,7 @@ export default function DetailPageItemInfor ({selectProduct}) {
                  </div>
                   <div className='detail_number_items'>
                         <input type="text" placeholder='QUANTITY'/>
-                        <p className='m-0'>
+                        <p className='m-0 d-flex align-items-center justify-content-center'>
                         <IoMdArrowDropleft className='arrow-icon' onClick={handleDecrease} /> {item_number} <IoMdArrowDropright className='arrow-icon' onClick={handleIncrease} />
                         </p>
                         <Button title='Add to cart' Italic normalBtn onClick={addToCartHandler} />

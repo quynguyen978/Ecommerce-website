@@ -5,7 +5,7 @@
 }
 
 .HomeFooterContainer_grid {
-      width: 60%;
+      width: 68%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -14,4 +14,31 @@
 .HomeFooterData_col_value {
       color: rgb(146, 142, 142);
       margin: 0;
+      
+}
+.HomeFooterData_col_value:hover {
+      cursor: pointer;
+      color: rgba(131, 130, 128, 0.753);
+}
+
+/* responsive */
+@media(max-width: 768px) {
+     
+.HomeFooterContainer_grid {
+      width: 88%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+}
+
+.HomeFooterData_col_value {
+      color: rgb(146, 142, 142);
+      margin: 0;
+      
+}
+.HomeFooterData_col_value:hover {
+      cursor: pointer;
+      color: rgba(131, 130, 128, 0.753);
+}
+
 }

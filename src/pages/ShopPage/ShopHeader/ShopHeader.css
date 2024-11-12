@@ -1,9 +1,15 @@
 .shopeHeader {
-      width: 60%;
+      width: 68%;
       margin: 10px auto;
       padding: 45px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: rgb(241, 247, 247);
+}
+
+@media (max-width: 768px) {
+      .shopeHeader {
+            width: 88%;
+      }
 }

@@ -1,3 +1,4 @@
+import { url } from '../../../Utilities/url';
 // adding current product to database
 export const handleAddToCart = async (userId, selectProduct, item_number) => {
       try {
@@ -9,7 +10,7 @@ export const handleAddToCart = async (userId, selectProduct, item_number) => {
                   productCategory: selectProduct.category,
                   proQuantity: item_number,
             }
-            const response = await fetch(`http://localhost:5000/products`, {
+            const response = await fetch(`${url}/products`, {
                   method: 'POST',
                   headers: {
                         'Content-Type': 'application/json',

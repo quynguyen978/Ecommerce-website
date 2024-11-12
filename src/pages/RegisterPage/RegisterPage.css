@@ -18,7 +18,7 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
       position: absolute;
       top: 50%;
-      left: 43%;
+      left: 45%;
       transform: translate(-50%, -50%);
       z-index: 10;
 }
@@ -30,3 +30,78 @@
       font-size: 30px;
 }
 
+/* mobile advice */
+@media (max-width: 576px) {
+      .signUpContainer {
+            width: 95%;
+            max-width: 95%;
+            height: 82%;
+            margin: auto;
+            padding: 40px 55px;
+            font-style: italic;
+            background-color: white;
+            color: rgb(121, 118, 118);
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+      }
+      
+      .SignUp_header {
+            margin-bottom: 60px;
+            padding: 15px;
+            text-align: center;
+            font-size: 30px;
+      }
+}
+
+/* tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+      .SignUpimg {
+            height: 100%;
+            width: 100vw;
+            background-image: url('../../Resource Assignment 03/banner1.jpg'); 
+            background-size: cover;
+            background-position:left;
+        }
+      .signUpContainer {
+            width: 82%;
+            max-width: 82%;
+            height: 82%;
+            margin: 0px auto 0;
+            padding: 40px 55px;
+            font-style: italic;
+            background-color: white;
+            color: rgb(121, 118, 118);
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+      }
+}
+
+/* lg screen */
+@media (min-width: 769px) and (max-width:992px){
+      .signUpContainer {
+            width: 60%;
+            max-width: 60%;
+            margin: 0px auto 0;
+            padding: 40px 55px;
+            font-style: italic;
+            background-color: white;
+            color: rgb(121, 118, 118);
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+      }
+}

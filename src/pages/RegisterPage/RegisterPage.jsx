@@ -1,9 +1,7 @@
-
 import { Link } from "react-router-dom";
 import FormSignUp from "../../Utilities/Form/FormSignUp/FormSignUp";
 import bannerImg from '../../Resource Assignment 03/banner1.jpg';
 import './RegisterPage.css';
-
 
 export default function RegisterPage() {
       

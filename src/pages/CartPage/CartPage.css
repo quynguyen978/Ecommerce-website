@@ -1,11 +1,35 @@
-.shopePageContainer {
-      width: 60%;
+.cartPageContainer {
+      width: 68%;
       margin: auto;
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 3fr 1fr;
       column-gap: 20px;
 }
 
 .cartPageTitle {
       grid-column: 1/span 2;
+}
+
+@media (max-width: 768px) {
+      .cartPageContainer {
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+      }
+
+      .cartPageTitle {
+            grid-column: 1/span 1;
+      }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+      .cartPageContainer {
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+      }
+
+      .cartPageTitle {
+            grid-column: 1/span 1;
+      }
 }

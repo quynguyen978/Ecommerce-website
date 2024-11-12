@@ -8,3 +8,28 @@
       grid-column: 1 / span 4;
 }
 
+/* mobile */
+@media (max-width: 576px) {
+      .HomeTopTrending_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+      }
+      
+      .HomeTopTrending_grid-listTitle  {
+            grid-column: 1 / span 2;
+      }
+}
+
+/* tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+      .HomeTopTrending_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+      }
+      
+      .HomeTopTrending_grid-listTitle  {
+            grid-column: 1 / span 3;
+      }
+}
