@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 connectMongoose();
 // middleware
-app.use(cors({ origin: 'http://localhost:3000' })); // Allow frontend domain
+app.use(cors({ origin: 'https://your-frontend.netlify.app' })); // Allow frontend domain
 app.use(express.json()); // Correct middleware for parsing JSON
 
 // Route to create a new user
