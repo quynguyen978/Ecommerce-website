@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 connectMongoose();
 // middleware
-app.use(cors({ origin: ['https://your-frontend.netlify.app', 'http://localhost:3000'],
+app.use(cors({ origin: ['https://lux-electric-shop.netlify.app/shop', 'http://localhost:3000'],
   methods: 'GET,POST,PUT,DELETE',
   credentials: true
  })); // Allow frontend domain
