@@ -49,8 +49,8 @@ const checkout = async (req, res) => {
               payment_method_types: ['card'],
               line_items: lineItems,
               mode: 'payment',
-              success_url: 'https://lux-electric-shop.netlify.app/payment-success', // Replace with your success URL
-              cancel_url: 'https://lux-electric-shop.netlify.app/payment-cancel', // Replace with your cancel URL
+              success_url: 'https://lux-electric-shop.netlify/payment-success', // Replace with your success URL
+              cancel_url: 'https://lux-electric-shop.netlify/payment-cancel', // Replace with your cancel URL
           });
       
           // Send the session ID to the client
