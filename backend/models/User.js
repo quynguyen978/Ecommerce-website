@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-const { boolean } = require('zod');
+// const { boolean } = require('zod');
 
 // define user Schema
 const userSchema = new mongoose.Schema({
