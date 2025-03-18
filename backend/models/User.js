@@ -1,6 +1,9 @@
 
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 // const { boolean } = require('zod');
+=======
+>>>>>>> d7499d6 (added jwt for backend)
 
 // define user Schema
 const userSchema = new mongoose.Schema({
