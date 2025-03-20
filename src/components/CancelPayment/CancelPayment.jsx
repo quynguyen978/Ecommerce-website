@@ -9,8 +9,8 @@ export default function CancelPayment() {
       return (
             <div className=" d-flex justify-content-between align-items-center m-2" style={{minHeight: '100vh'}}>
                   
-                  <div class="card d-flex justify-content-between align-items-center m-auto shadow p-3 w-90 w-sm-90 w-md-80 " style={{ height: '40vh'}}>
-                        <div class="card-body text-center">
+                  <div className="card d-flex justify-content-between align-items-center m-auto shadow p-3 w-90 w-sm-90 w-md-80 " style={{ height: '40vh'}}>
+                        <div className="card-body text-center">
                               <FcCancel style={{fontSize: '2rem'}}/>
                               <h4 className="m-4">The payment was canceled
                               </h4>                             

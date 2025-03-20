@@ -57,8 +57,8 @@ const handleMouseLeave = () => {
       return (
             <header>
                   <nav className="navbar navbar-expand-lg bg-body-tertiary container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                              <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse"  id = 'navbarMenu'>
                               <div className="d-flex flex-column flex-sm-column flex-md-row justify-content-between justify-conten-sm-start nav-container">
@@ -73,8 +73,8 @@ const handleMouseLeave = () => {
                                                 </li>
                                           })}
                                     </ul>
-                                    <ul className="d-flex flex-column mb-3 p-0">
-                                          <li className="navigate-shopeName ">BOUTIQUE</li>
+                                    <ul className="d-flex flex-column mb-3 p-0 mt-3 mt-md-0">
+                                          <li className="navigate-shopeName">BOUTIQUE</li>
                                     </ul>
                                     <ul className="d-flex flex-column flex-md-row flex-sm-column justify-conten-sm-start navigate-right">
                                           {navigates.slice(3).map((navigate, index) => {
@@ -93,9 +93,9 @@ const handleMouseLeave = () => {
                                                       <IoMdPerson style={{color: 'gray'}}/> {userName}<MdArrowDropDown />
 
                                                       {visibleDropdown && 
-                                                                  <ul class="dropdown-menu" style={{display: visibleDropdown ? 'block' : 'none'}}>
-                                                                        <li class="dropdown-item" onClick={handleLogout}>Logout</li>
-                                                                        <li class="dropdown-item"> Orders history</li>
+                                                                  <ul className="dropdown-menu" style={{display: visibleDropdown ? 'block' : 'none'}}>
+                                                                        <li className="dropdown-item" onClick={handleLogout}>Logout</li>
+                                                                        <li className="dropdown-item"> Orders history</li>
                                                                   </ul>
                                                       }
                                                       </li> 

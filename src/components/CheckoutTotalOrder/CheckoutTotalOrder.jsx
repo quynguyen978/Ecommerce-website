@@ -1,12 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import './CheckoutTotalOrder.css';
 import { useLocation } from 'react-router-dom';
+import { fetchCartData } from '../../Utilities/fetUserCart';
 import formatNumberWithDots from '../../Utilities/formatNumberWithDot';
 
 export default function  CheckoutTotalOrder () {
+      const dispatch = useDispatch();
+      const userId = useSelector((state) => state.loginUser.userId);
       const cartUserItems = useSelector((state) => state.fetchUserCart.userCart);
       const location = useLocation();
       const { subTotal } = location.state || {};
+      // console.log('subtotal order', subTotal)
+      // call api
+      useEffect(()=> {
+            if(userId) {
+                  dispatch(fetchCartData(userId));
+            }
+      }, [userId, dispatch] )
       
       return (
             <div className="checkoutOderContainer">
@@ -24,7 +35,7 @@ export default function  CheckoutTotalOrder () {
                          { ( cartUserItems && cartUserItems.cart 
                               && <div className='d-flex justify-content-between'>
                               <p className='fw-bold'>TOTAL</p>
-                              <p className=' fs-5'>{subTotal} VND</p>
+                              <p className=' fs-5'>{formatNumberWithDots(subTotal)} VND</p>
                         </div>
                          )}     
             </div>

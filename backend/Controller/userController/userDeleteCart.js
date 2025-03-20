@@ -15,6 +15,9 @@ const cartDeleted = async (req, res) => {
             // find product that will be deleted
             const productDeleted =  user.cart.find((item) =>  item._id.equals(productId));
             productDeleted.deleteOne();
+            if(productDeleted.length === 0) {
+                  res.status(400).json({message: 'The cart is empty.'})
+            }
             user.save();
             res.status(202).json({ user: user})
       }catch(err) {

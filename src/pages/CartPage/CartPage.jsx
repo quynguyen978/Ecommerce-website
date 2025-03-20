@@ -7,6 +7,7 @@ import './CartPage.css';
 
 function CartPage() {
       const userId = useSelector((state) => state.loginUser.userId);
+      // console.log('userid', userId)
       const cartUserItems = useSelector((state) => state.fetchUserCart.userCart);
 
       // calculate the cart's product total

@@ -9,8 +9,8 @@ export default function SuccessPayment() {
       return (
             <div className=" d-flex justify-content-between align-items-center m-2" style={{minHeight: '100vh'}}>
                   
-                  <div class="card d-flex justify-content-between align-items-center m-auto shadow p-3 w-80 w-sm-80 w-md-70" style={{ height: '40vh'}}>
-                        <div class="card-body text-center">
+                  <div className="card d-flex justify-content-between align-items-center m-auto shadow p-3 w-80 w-sm-80 w-md-70" style={{ height: '40vh'}}>
+                        <div className="card-body text-center">
                               <span className=" p-2 bg-success border border-success rounded-circle text-white d-inline-flex">
                               <FaDollarSign/>
                               </span>
